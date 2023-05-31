@@ -1,0 +1,6 @@
+opencv-python
+halo
+joblib
+progress
+requests
+scikit-learn
