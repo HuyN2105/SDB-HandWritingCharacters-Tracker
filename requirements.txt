@@ -4,3 +4,6 @@ joblib
 progress
 requests
 scikit-learn
+flask
+waitress
+werkzeug

@@ -75,6 +75,16 @@ class Drawer:
 
         return images
 
+    def seperate_image(self, image):
+        images = []
+
+        char_images = image.get_contours()
+
+        for cimg in char_images:
+            images.append(Drawer.convert_to_emnist(img=cimg))
+
+        return images
+
     @staticmethod
     def convert_to_emnist(img):
         """
@@ -89,7 +99,7 @@ class Drawer:
         return img
 
 
-image_path = "./images/T.png"
+image_path = "./images/0.png"
 
 if __name__ == '__main__':
     images = Drawer().get_images(image_path)
@@ -100,3 +110,6 @@ if __name__ == '__main__':
         cv2.imshow(winname=label, mat=image)
         cv2.waitKey(delay=0)
         cv2.destroyAllWindows()
+
+def process_img(img):
+    print("hello")
